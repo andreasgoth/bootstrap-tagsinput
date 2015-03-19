@@ -149,7 +149,9 @@
 
       self.$element.trigger($.Event('itemAdded', { item: item, options: options }));
 
-      self.$input.typeahead('val', '');
+      if (self.options.typeaheadjs) {
+        self.$input.typeahead('val', '');
+      }
 
     },
 
